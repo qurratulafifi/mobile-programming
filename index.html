@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <script>
+            function add() {
+                var num1 = parseInt(document.getElementById("no1").value);
+                var num2 = parseInt(document.getElementById("no2").value);
+                var total = num1 + num2;
+                document.getElementById("add").innerHTML = "Total = " + num1 + " + " + num2 + " = " + total;
+            }
+
+            function subtract() {
+                var num1 = parseInt(document.getElementById("no1").value);
+                var num2 = parseInt(document.getElementById("no2").value);
+                var total = num1 - num2;
+                document.getElementById("subtract").innerHTML = "Total = " + num1 + " - " + num2 + " = " + total;
+            }
+
+            function multiply() {
+                var num1 = parseInt(document.getElementById("no1").value);
+                var num2 = parseInt(document.getElementById("no2").value);
+                var total = num1 * num2;
+                document.getElementById("multiply").innerHTML = "Total = " + num1 + " x " + num2 + " = " + total;
+            }
+
+            function divide() {
+                var num1 = parseInt(document.getElementById("no1").value);
+                var num2 = parseInt(document.getElementById("no2").value);
+                var total = num1 / num2;
+                document.getElementById("divide").innerHTML = "Total = " + num1 + " / " + num2 + " = " + total;
+            }
+        </script>
+        <div class = "container">
+            <br>
+            <h2> Basic Calculator </h2>
+            <p class = "alert alert-danger">
+                Enter first number:
+                <br>
+                <input type = "number" id = "no1" placeholder = "eg., 35">
+                <br>
+                Enter second number:
+                <br>
+                <input type = "number" id = "no2" placeholder = "eg., 35">
+            </p>
+
+            <p class = "alert alert-warning">
+                Result will appear here 
+                <br>
+                <span id = "add"> Output for add </span><br>
+                <span id = "subtract"> Output for subtract </span><br>
+                <span id = "multiply"> Output for multiply </span><br>
+                <span id = "divide"> Output for divide </span><br>
+            </p> 
+
+            <button class = "btn btn-success" onclick = "add()" > Add </button>
+            <button class = "btn btn-success" onclick = "subtract()" > Subtract </button>
+            <button class = "btn btn-success" onclick = "multiply()" > Multiply </button>
+            <button class = "btn btn-success" onclick = "divide()" > Divide </button>
+        </div>
+    </body>
+</html>
